@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <ThingDef Name="m_BaseMask" ParentName="ArmorHelmetMakeableBase" Abstract="True">
+    <techLevel>Industrial</techLevel>
+    <uiIconScale>1.0</uiIconScale>
+	<costList>
+      <Steel>15</Steel>
+    </costList>
+    <tradeTags>
+      <li>Clothing</li>
+      <li>Armor</li>
+    </tradeTags>
+    <statBases>
+		<MaxHitPoints>120</MaxHitPoints>
+		<WorkToMake>6000</WorkToMake>
+		<Mass>2</Mass>
+		<Bulk>3</Bulk>
+		<WornBulk>0.5</WornBulk>
+		<ArmorRating_Sharp>0.32</ArmorRating_Sharp>
+		<ArmorRating_Blunt>0.18</ArmorRating_Blunt>
+		<ArmorRating_Heat>0.10</ArmorRating_Heat>
+		<Insulation_Cold>1</Insulation_Cold>
+		<Insulation_Heat>1</Insulation_Heat>
+		<EquipDelay>1.0</EquipDelay>
+	</statBases>
+    <recipeMaker>
+      <researchPrerequisite>Machining</researchPrerequisite>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+	<modExtensions>
+		<li Class="CombatExtended.PartialArmorExt">
+			<stats>
+				<li>
+					<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+					<parts>
+						<li>Eye</li>
+					</parts>
+				</li>
+				<li>
+					<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+					<parts>
+						<li>Eye</li>
+					</parts>
+				</li>
+			</stats>
+		</li>
+	  </modExtensions>
+  </ThingDef>
+
+  <ThingDef ParentName="m_BaseMask">
+    <defName>m_CQCM_Black</defName>
+    <label>CQCM up armored ballistic mask (black)</label>
+    <description>Atomic Defense's CQCM ballistic mask provides protection against wide variety of short-mid range weapons including shotguns and assault rifles. This heavyweight reinforced mask covers the wearer's face completely. It features an inner lining and wraps slightly around the sides of the head for added protection. The mask also features five-point adjustable straps to ensure a comfortable and precise fit.</description>
+	
+    <graphicData>
+      <texPath>Things/Apparel/Masks/cqcm_black</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.0</drawSize>
+    </graphicData>
+	
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Masks/cqcm_black</wornGraphicPath>
+      <layers>
+        <li>StrappedHead</li>
+      </layers>
+      <tags>
+        <li>IndustrialMilitaryBasic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+	
+  </ThingDef>
+  
+  <ThingDef ParentName="m_BaseMask">
+    <defName>m_CQCM_Skull</defName>
+    <label>CQCM up armored ballistic mask (skull)</label>
+    <description>Atomic Defense's CQCM ballistic mask provides protection against short-range weapons including pistols, shotguns and knives. Some say the skull is a universal symbol that inspires fear and respect in opponents.</description>
+	
+    <graphicData>
+      <texPath>Things/Apparel/Masks/cqcm_skull</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.0</drawSize>
+    </graphicData>
+	
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Masks/cqcm_skull</wornGraphicPath>
+      <layers>
+        <li>StrappedHead</li>
+      </layers>
+      <tags>
+        <li>IndustrialMilitaryBasic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+	
+  </ThingDef>
+  
+  <ThingDef ParentName="m_BaseMask">
+    <defName>m_CQCM_StopMe</defName>
+    <label>CQCM up armored ballistic mask (stop me)</label>
+    <description>Atomic Defense's CQCM ballistic mask provides protection against short-range weapons including pistols, shotguns and knives. Could this writing on it be considered a cry for help?</description>
+	
+    <graphicData>
+      <texPath>Things/Apparel/Masks/cqcm_stopme</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.0</drawSize>
+    </graphicData>
+	
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Masks/cqcm_stopme</wornGraphicPath>
+      <layers>
+        <li>StrappedHead</li>
+      </layers>
+      <tags>
+        <li>IndustrialMilitaryBasic</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+	
+  </ThingDef>
+
+</Defs>

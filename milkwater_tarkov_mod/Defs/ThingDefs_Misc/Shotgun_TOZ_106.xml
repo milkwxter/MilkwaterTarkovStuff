@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+        
+	<ThingDef ParentName="m_BaseShotgun">
+	  <defName>m_TOZ106_Shotgun</defName>
+	  <label>TOZ-106</label>
+	  <description>A single-barreled 20 gauge hunting shotgun with a sliding breech bolt. Widely known by it vernacular name, the Death of the Chairman, for its compact size.</description>
+	  <graphicData>
+		<texPath>Things/Weapons/m_toz_106</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1.1</drawSize>
+	  </graphicData>
+	  <equippedAngleOffset>0</equippedAngleOffset>
+
+	  <statBases>
+		<WorkToMake>12000</WorkToMake>
+		<Mass>2.95</Mass>
+		<Bulk>8</Bulk>
+		<SightsEfficiency>1</SightsEfficiency>
+		<ShotSpread>0.17</ShotSpread>
+		<SwayFactor>1.37</SwayFactor>
+		<RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+	  </statBases>
+
+	  <costList>
+		<Steel>30</Steel>
+		<ComponentIndustrial>3</ComponentIndustrial>
+	  </costList>
+
+	  <verbs>
+		<li Class="CombatExtended.VerbPropertiesCE">
+		  <recoilAmount>3</recoilAmount>
+		  <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+		  <hasStandardCommand>true</hasStandardCommand>
+		  <defaultProjectile>Bullet_20Gauge_Buck</defaultProjectile>
+		  <burstShotCount>1</burstShotCount>
+		  <ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+		  <warmupTime>0.6</warmupTime>
+		  <range>16</range>
+		  <soundCast>Milkwater_Shot_TOZ106</soundCast>
+		  <soundCastTail>GunTail_Heavy</soundCastTail>
+		  <muzzleFlashScale>12</muzzleFlashScale>
+		</li>
+	  </verbs>
+	  
+	  <comps>
+		<li Class="CombatExtended.CompProperties_AmmoUser">
+		  <magazineSize>2</magazineSize>
+		  <reloadTime>3</reloadTime>
+		  <ammoSet>AmmoSet_20Gauge</ammoSet>
+		</li>
+		<li Class="CombatExtended.CompProperties_FireModes">
+		  <aiUseBurstMode>false</aiUseBurstMode>
+		  <aiAimMode>Snapshot</aiAimMode>
+		</li>
+	  </comps>
+	  <recipeMaker>
+		<researchPrerequisite>Gunsmithing</researchPrerequisite>
+		<skillRequirements>
+		  <Crafting>3</Crafting>
+		</skillRequirements>
+	  </recipeMaker>
+	  
+	  <modExtensions>
+		<li Class="CombatExtended.GunDrawExtension">
+		  <DrawSize>1.0,1.0</DrawSize>
+		  <DrawOffset>0.0,-0.1</DrawOffset>
+		</li>
+		<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+		  <def>MF_StandardMuzzleFalshTwo</def>
+		  <drawSize>(1,1)</drawSize>
+		  <offsets><li>(0.5,0.11)</li></offsets>
+		</li>
+	  </modExtensions>
+	</ThingDef>
+
+  
+</Defs>

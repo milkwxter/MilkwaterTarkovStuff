@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--=============== Abstract base ====================-->
+	<ThingDef Name="TarkovTreasureBase" ParentName="ResourceBase" Abstract="True">
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>1</stackLimit>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>0.3</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<tradeability>Sellable</tradeability>
+		<techLevel>Ultra</techLevel>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+	</ThingDef>
+	
+	<!--=============== LEDX ====================-->
+	<ThingDef ParentName="TarkovTreasureBase">
+		<defName>m_LEDX</defName>
+		<label>LEDX skin transilluminator</label>
+		<description>A medical device designed to accurately determine the position of the veins under the skin.</description>
+		<graphicData>
+			<texPath>Things/Items/m_ledx</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>0.3</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+	</ThingDef>
+	
+	<!--=============== Tetriz ====================-->
+	<ThingDef ParentName="TarkovTreasureBase">
+		<defName>m_Tetriz</defName>
+		<label>Tetriz portable game console</label>
+		<description>An ancient artifact of a lost past. May be of interest to avid collectors of electronics.</description>
+		<graphicData>
+			<texPath>Things/Items/m_tetriz</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>800</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>0.5</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+	</ThingDef>
+	
+	<!--=============== CPU ====================-->
+	<ThingDef ParentName="TarkovTreasureBase">
+		<defName>m_CPU</defName>
+		<label>PC CPU</label>
+		<description>PC central processing units, in lack of properly working computers, have found their purpose as a construction material for makeshift antenna reflector-type parasites.</description>
+		<stackLimit>5</stackLimit>
+		<graphicData>
+			<texPath>Things/Items/m_cpu</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>200</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>0.1</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+	</ThingDef>
+
+
+</Defs>

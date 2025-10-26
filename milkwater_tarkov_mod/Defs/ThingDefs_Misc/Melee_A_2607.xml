@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+        
+  <!-- Kiba Arms tomahawk -->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+	  <defName>m_A_2607_Melee</defName>
+	  <label>A-2607 knife</label>
+	  <description>The Bars A-2607 knife, forged of 95Kh18 steel with a fine wood handle and brass guard.</description>
+	  <techLevel>Industrial</techLevel>
+	  <graphicData>
+		<texPath>Things/Weapons/m_a_2607</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1.1</drawSize>
+	  </graphicData>
+	  
+    <uiIconScale>1.3</uiIconScale>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+
+	  <statBases>
+		<WorkToMake>4000</WorkToMake>
+		<Mass>1.5</Mass>
+		<MarketValue>5</MarketValue>
+		<SellPriceFactor>0.3</SellPriceFactor>
+		<Bulk>1</Bulk>
+		<MeleeCounterParryBonus>0.10</MeleeCounterParryBonus>
+	  </statBases>
+	  
+		<equippedStatOffsets>
+			<Bulk>2</Bulk>
+			<MeleeCounterParryBonus>0.20</MeleeCounterParryBonus>
+			<MeleeCritChance>0.06</MeleeCritChance>
+			<MeleeParryChance>0.15</MeleeParryChance>
+			<MeleeDodgeChance>0.30</MeleeDodgeChance>
+		</equippedStatOffsets>
+
+	  <costList>
+		<Steel>5</Steel>
+	  </costList>
+
+	  <tools>
+		<li Class="CombatExtended.ToolCE">
+			<label>handle</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>3</power>
+			<cooldownTime>1.75</cooldownTime>
+			<chanceFactor>0.1</chanceFactor>
+			<armorPenetrationSharp>0.90</armorPenetrationSharp>
+			<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+		</li>
+		<li Class="CombatExtended.ToolCE">
+			<label>blade</label>
+			<capacities>
+				<li>Cut</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>1.85</cooldownTime>
+			<armorPenetrationSharp>1.80</armorPenetrationSharp>
+			<linkedBodyPartsGroup>Head</linkedBodyPartsGroup>
+		</li>
+	  </tools>
+
+	  <weaponTags>
+		<li>IndustrialMeleeBasic</li>
+		<li>CE_Sidearm_Melee</li>
+		<li>CE_OneHandedWeapon</li>
+	  </weaponTags>
+	  <tradeTags>
+		<li>WeaponMelee</li>
+	  </tradeTags>
+	</ThingDef>
+
+  
+</Defs>

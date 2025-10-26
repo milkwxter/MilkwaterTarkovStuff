@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- ==================== Ammo Category ========================== -->
+	<CombatExtended.AmmoCategoryDef>
+        <defName>QuakeMaker</defName>
+        <label>QuakeMaker</label>
+        <labelShort>QM</labelShort>
+		<description>Features a heavy lead hollow-point bullet. Used mainly for home-defense, it has great stopping power against unarmored targets.</description>
+    </CombatExtended.AmmoCategoryDef>
+
+	<!-- ==================== Ammo ========================== -->
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="9x19mmParaBase">
+		<defName>Ammo_9x19mmPara_QuakeMaker</defName>
+		<label>9x19mm Para (QuakeMaker)</label>
+		<description>Features a heavy lead hollow-point bullet. Used mainly for home-defense, it has great stopping power against unarmored targets.</description>
+		<graphicData>
+			<texPath>Things/Ammo/Pistol/QuakeMaker</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ammoClass>HollowPoint</ammoClass>
+		<cookOffProjectile>Bullet_9x19mmPara_QuakeMaker</cookOffProjectile>
+	</ThingDef>
+	
+	<!-- ================== Projectiles ================== -->
+	<ThingDef ParentName="Base9x19mmParaBullet">
+		<defName>Bullet_9x19mmPara_QuakeMaker</defName>
+		<label>9mm Para bullet (QuakeMaker)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>18</damageAmountBase>
+			<armorPenetrationSharp>1.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>7.0</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	
+	<!-- ==================== Recipes ========================== -->
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_9x19mmPara_QuakeMaker</defName>
+		<label>make 9x19mm Parabellum (QuakeMaker) cartridge x500</label>
+		<description>Craft 500 9x19mm Parabellum (QuakeMaker) cartridges.</description>
+		<jobString>Making 9x19mm Parabellum (QuakeMaker) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>16</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_9x19mmPara_QuakeMaker>500</Ammo_9x19mmPara_QuakeMaker>
+		</products>
+		<workAmount>1400</workAmount>
+	</RecipeDef>
+
+</Defs>

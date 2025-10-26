@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="m_BaseAR">
+	  <defName>m_ADAR215_Rifle</defName>
+	  <label>ADAR 2-15</label>
+	  <description>The ADAR 2-15 Russian civilian carbine that is based on the design of the AR-15. The carbine is produced in St. Petersburg with use of Israeli components and chrome barrels made by Molot Arms.</description>
+	  <graphicData>
+		<texPath>Things/Weapons/m_adar_215</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1.2</drawSize>
+	  </graphicData>
+	  <equippedAngleOffset>0</equippedAngleOffset>
+	  
+      <uiIconScale>1.00</uiIconScale>
+
+	  <statBases>
+		<WorkToMake>30000</WorkToMake>
+		<SightsEfficiency>1</SightsEfficiency>
+		<ShotSpread>0.10</ShotSpread>
+		<SwayFactor>1.37</SwayFactor>
+		<Bulk>10</Bulk>
+		<Mass>3.5</Mass>
+		<RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
+	  </statBases>
+
+	  <costList>
+		<Steel>40</Steel>
+		<WoodLog>10</WoodLog>
+		<ComponentIndustrial>5</ComponentIndustrial>
+	  </costList>
+
+	  <verbs>
+		<li Class="CombatExtended.VerbPropertiesCE">
+		  <recoilAmount>1.5</recoilAmount>
+		  <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+		  <hasStandardCommand>true</hasStandardCommand>
+		  <defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+		  <warmupTime>1.1</warmupTime>
+		  <range>55</range>
+		  <soundCast>Milkwater_Shot_ADAR_215</soundCast>
+		  <soundCastTail>GunTail_Light</soundCastTail>
+		  <muzzleFlashScale>11</muzzleFlashScale>
+		</li>
+	  </verbs>
+	  
+	  <comps>
+		<li Class="CombatExtended.CompProperties_AmmoUser">
+		  <magazineSize>20</magazineSize>
+		  <reloadTime>4</reloadTime>
+		  <ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+		</li>
+		<li Class="CombatExtended.CompProperties_FireModes">
+		  <aiUseBurstMode>FALSE</aiUseBurstMode>
+		  <aiAimMode>AimedShot</aiAimMode>
+		</li>
+	  </comps>
+	  <recipeMaker>
+		<researchPrerequisite>Gunsmithing</researchPrerequisite>
+		<skillRequirements>
+		  <Crafting>4</Crafting>
+		</skillRequirements>
+	  </recipeMaker>
+	  
+	  <modExtensions>
+		<li Class="CombatExtended.GunDrawExtension">
+		  <DrawSize>1.0,1.0</DrawSize>
+		  <DrawOffset>0.0,-0.1</DrawOffset>
+		  <CasingOffset>0,0</CasingOffset>
+		  <CasingAngleOffset>0</CasingAngleOffset>
+		</li>
+		<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+		  <def>MF_StandardMuzzleFalshTwo</def>
+		  <drawSize>(1,1)</drawSize>
+		  <offsets><li>(0.55,0.06)</li></offsets>
+		</li>
+	  </modExtensions>
+	</ThingDef>
+
+
+</Defs>

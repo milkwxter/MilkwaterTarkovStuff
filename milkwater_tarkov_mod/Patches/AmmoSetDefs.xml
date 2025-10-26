@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!--Adds the created bullets to the existing CE ammosets-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_9x19mmPara"]/ammoTypes</xpath>
+		<value>
+			<Ammo_9x19mmPara_QuakeMaker>Bullet_9x19mmPara_QuakeMaker</Ammo_9x19mmPara_QuakeMaker>
+		</value>
+	</Operation>
+	
+</Patch>

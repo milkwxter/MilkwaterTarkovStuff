@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="m_BaseAR">
+	  <defName>m_AK74_Rifle</defName>
+	  <label>AK-74</label>
+	  <description>The AK-74 (Avtomat Kalashnikova 74 - "Kalashinikov's Automatic rifle 74") 5.45x39mm assault rifle, developed in 1970 by M. T. Kalashnikov, became a further evolution of the AKM due to adoption of the new 5.45x39 ammunition by the military. The AK-74 was equipped with a new buttstock, handguard (which retained the AKM-type finger swells), and gas cylinder. The stock has a shoulder pad different from that on the AKM, which is rubber and serrated for improved seating against the shooter. In addition, there are lightening cuts on each side of the buttstock. The buttstock, lower handguard, and upper heatguard were first manufactured from laminated wood, this later changed to a syntehtic, plum or dark brown colored fiberglass.</description>
+	  <graphicData>
+		<texPath>Things/Weapons/m_ak74</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1.2</drawSize>
+	  </graphicData>
+	  <equippedAngleOffset>0</equippedAngleOffset>
+	  
+      <uiIconScale>1.00</uiIconScale>
+
+	  <statBases>
+		<WorkToMake>30000</WorkToMake>
+		<SightsEfficiency>1</SightsEfficiency>
+		<ShotSpread>0.12</ShotSpread>
+		<SwayFactor>1.39</SwayFactor>
+		<Bulk>10</Bulk>
+		<Mass>4.5</Mass>
+		<RangedWeapon_Cooldown>0.39</RangedWeapon_Cooldown>
+	  </statBases>
+
+	  <costList>
+		<Steel>50</Steel>
+		<WoodLog>10</WoodLog>
+		<ComponentIndustrial>6</ComponentIndustrial>
+	  </costList>
+
+	  <verbs>
+		<li Class="CombatExtended.VerbPropertiesCE">
+		  <recoilAmount>1.7</recoilAmount>
+		  <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+		  <hasStandardCommand>true</hasStandardCommand>
+		  <defaultProjectile>Bullet_545x39mmSoviet_FMJ</defaultProjectile>
+		  <warmupTime>1.1</warmupTime>
+		  <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+		  <burstShotCount>3</burstShotCount>
+		  <range>55</range>
+		  <soundCast>Milkwater_Shot_AK74</soundCast>
+		  <soundCastTail>GunTail_Heavy</soundCastTail>
+		  <muzzleFlashScale>11</muzzleFlashScale>
+		</li>
+	  </verbs>
+	  
+	  <comps>
+		<li Class="CombatExtended.CompProperties_AmmoUser">
+		  <magazineSize>30</magazineSize>
+		  <reloadTime>4</reloadTime>
+		  <ammoSet>AmmoSet_545x39mmSoviet</ammoSet>
+		</li>
+		<li Class="CombatExtended.CompProperties_FireModes">
+		  <aiUseBurstMode>TRUE</aiUseBurstMode>
+		  <aiAimMode>AimedShot</aiAimMode>
+		  <aimedBurstShotCount>3</aimedBurstShotCount>
+		</li>
+	  </comps>
+	  <recipeMaker>
+		<researchPrerequisite>Gunsmithing</researchPrerequisite>
+		<skillRequirements>
+		  <Crafting>4</Crafting>
+		</skillRequirements>
+	  </recipeMaker>
+	  
+	  <modExtensions>
+		<li Class="CombatExtended.GunDrawExtension">
+		  <DrawSize>1.0,1.0</DrawSize>
+		  <DrawOffset>0.0,-0.1</DrawOffset>
+		  <CasingOffset>0,0</CasingOffset>
+		  <CasingAngleOffset>0</CasingAngleOffset>
+		</li>
+		<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+		  <def>MF_StandardMuzzleFalshTwo</def>
+		  <drawSize>(1,1)</drawSize>
+		  <offsets><li>(0.55,0.06)</li></offsets>
+		</li>
+	  </modExtensions>
+	</ThingDef>
+
+
+</Defs>
