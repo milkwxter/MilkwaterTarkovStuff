@@ -5,7 +5,7 @@
     <techLevel>Industrial</techLevel>
     <uiIconScale>1.0</uiIconScale>
 	<costList>
-      <Cloth>10</Cloth>
+      <Cloth>25</Cloth>
     </costList>
     <tradeTags>
       <li>Clothing</li>
@@ -50,12 +50,13 @@
 	  
 		<apparel>
 		  <countsAsClothingForNudity>false</countsAsClothingForNudity>
-		  <bodyPartGroups>
-			<li>UpperHead</li>
-		  </bodyPartGroups>
-		  <layers>
-		   <li>Overhead</li>
-		  </layers>
+			<bodyPartGroups>
+				<li>UpperHead</li>
+				<li>Teeth</li>
+			</bodyPartGroups>
+			<layers>
+				<li>OnHead</li>
+			</layers>
 		  <tags>
 			<li>Balaclava</li>
 			<li>IndustrialMilitaryBasic</li>
@@ -81,6 +82,40 @@
 	
     <apparel>
       <wornGraphicPath>Things/Apparel/Balaclavas/m_balaclava_green</wornGraphicPath>
+    </apparel>
+	
+  </ThingDef>
+  
+  <ThingDef ParentName="m_BaseBalaclava">
+    <defName>m_Balaclava_NotNice</defName>
+    <label>balaclava (not nice)</label>
+    <description>A definitive woolen balaclava is not only a head-warmer but soul-warmer too for anyone who is too modest for public heroic deeds. The letterings add some flavor.</description>
+	
+    <graphicData>
+      <texPath>Things/Apparel/Balaclavas/m_balaclava_notnice</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.0</drawSize>
+    </graphicData>
+	
+    <apparel>
+      <wornGraphicPath>Things/Apparel/Balaclavas/m_balaclava_notnice</wornGraphicPath>
+    </apparel>
+	
+  </ThingDef>
+  
+  <ThingDef ParentName="m_BaseBalaclava">
+    <defName>m_Balaclava_Scars</defName>
+    <label>balaclava (scars)</label>
+    <description>A definitive woolen balaclava is not only a head-warmer but soul-warmer too for anyone who is too modest for public heroic deeds. Scars adorn a man, even if they're just on his balaclava.</description>
+	
+    <graphicData>
+      <texPath>Things/Apparel/Balaclavas/m_balaclava_scars</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>1.0</drawSize>
+    </graphicData>
+	
+    <apparel>
+      <wornGraphicPath>Things/Apparel/Balaclavas/m_balaclava_scars</wornGraphicPath>
     </apparel>
 	
   </ThingDef>

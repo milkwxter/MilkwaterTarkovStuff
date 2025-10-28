@@ -34,7 +34,7 @@
 		</equippedStatOffsets>
 
 	  <costList>
-		<Steel>5</Steel>
+		<Steel>25</Steel>
 	  </costList>
 
 	  <tools>
@@ -55,7 +55,7 @@
 				<li>Cut</li>
 			</capacities>
 			<power>9</power>
-			<cooldownTime>1.85</cooldownTime>
+			<cooldownTime>1.35</cooldownTime>
 			<armorPenetrationSharp>1.80</armorPenetrationSharp>
 			<linkedBodyPartsGroup>Head</linkedBodyPartsGroup>
 		</li>

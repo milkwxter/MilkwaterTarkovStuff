@@ -65,8 +65,8 @@
 		<description>PC central processing units, in lack of properly working computers, have found their purpose as a construction material for makeshift antenna reflector-type parasites.</description>
 		<stackLimit>5</stackLimit>
 		<graphicData>
-			<texPath>Things/Items/m_cpu</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Items/CPU</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
 			<MarketValue>200</MarketValue>

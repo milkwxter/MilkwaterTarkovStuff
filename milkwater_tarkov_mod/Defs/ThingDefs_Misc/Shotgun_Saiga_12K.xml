@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+        
+	<ThingDef ParentName="m_BaseShotgun">
+	  <defName>m_Saiga12K_Shotgun</defName>
+	  <label>Saiga-12K 12ga semi-automatic shotgun</label>
+	  <description>A semi-automatic 12-gauge shotgun with a folding stock, equipped with a firing mechanism safety lock that only allows firing from extended stock position. Features a short 430mm barrel.</description>
+	  <graphicData>
+		<texPath>Things/Weapons/m_saiga_12k</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1.2</drawSize>
+	  </graphicData>
+	  <equippedAngleOffset>0</equippedAngleOffset>
+
+	  <statBases>
+		<WorkToMake>20000</WorkToMake>
+		<Mass>4</Mass>
+		<Bulk>10</Bulk>
+		<SightsEfficiency>1.0</SightsEfficiency>
+		<ShotSpread>0.15</ShotSpread>
+		<SwayFactor>1.21</SwayFactor>
+		<RangedWeapon_Cooldown>0.39</RangedWeapon_Cooldown>
+	  </statBases>
+
+	  <costList>
+		<Steel>40</Steel>
+		<ComponentIndustrial>5</ComponentIndustrial>
+	  </costList>
+
+	  <verbs>
+		<li Class="CombatExtended.VerbPropertiesCE">
+		  <recoilAmount>2.5</recoilAmount>
+		  <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+		  <hasStandardCommand>true</hasStandardCommand>
+		  <defaultProjectile>Bullet_12Gauge_Buck</defaultProjectile>
+		  <burstShotCount>1</burstShotCount>
+		  <ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+		  <warmupTime>0.6</warmupTime>
+		  <range>16</range>
+		  <soundCast>Milkwater_Shot_Saiga12K</soundCast>
+		  <soundCastTail>GunTail_Heavy</soundCastTail>
+		  <muzzleFlashScale>12</muzzleFlashScale>
+		</li>
+	  </verbs>
+	  
+	  <comps>
+		<li Class="CombatExtended.CompProperties_AmmoUser">
+		  <magazineSize>5</magazineSize>
+		  <reloadTime>4.0</reloadTime>
+		  <ammoSet>AmmoSet_12Gauge</ammoSet>
+		</li>
+		<li Class="CombatExtended.CompProperties_FireModes">
+		  <aiUseBurstMode>true</aiUseBurstMode>
+		  <aiAimMode>AimedShot</aiAimMode>
+		</li>
+	  </comps>
+	  <recipeMaker>
+		<researchPrerequisite>Gunsmithing</researchPrerequisite>
+		<skillRequirements>
+		  <Crafting>5</Crafting>
+		</skillRequirements>
+	  </recipeMaker>
+	  
+	  <modExtensions>
+		<li Class="CombatExtended.GunDrawExtension">
+		  <DrawSize>1.0,1.0</DrawSize>
+		  <DrawOffset>0.1,0.0</DrawOffset>
+		</li>
+		<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+		  <def>MF_StandardMuzzleFalshTwo</def>
+		  <drawSize>(1,1)</drawSize>
+		  <offsets><li>(0.5,0.11)</li></offsets>
+		</li>
+	  </modExtensions>
+	</ThingDef>
+
+  
+</Defs>

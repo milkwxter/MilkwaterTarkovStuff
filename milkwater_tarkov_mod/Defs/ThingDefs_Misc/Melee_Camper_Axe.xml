@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Defs>
-        
-  <!-- Kiba Arms tomahawk -->
+
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
-	  <defName>m_AntiqueAxe_Melee</defName>
-	  <label>antique axe</label>
-	  <description>An antique axe with a damaged handle that belonged to the ancient clan of hatchlings called WYCC.</description>
+	  <defName>m_CamperAxe_Melee</defName>
+	  <label>camper axe</label>
+	  <description>A universal travel axe for use in field conditions or in household. Also works as a melee weapon if things get too desperate.</description>
 	  <techLevel>Industrial</techLevel>
 	  <graphicData>
-		<texPath>Things/Weapons/m_antique_axe</texPath>
+		<texPath>Things/Weapons/m_camper_axe</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 		<drawSize>1.1</drawSize>
 	  </graphicData>
@@ -17,12 +16,12 @@
     <equippedAngleOffset>-65</equippedAngleOffset>
 
 	  <statBases>
-		<WorkToMake>4000</WorkToMake>
-		<Mass>3.5</Mass>
+		<WorkToMake>5000</WorkToMake>
+		<Mass>3.0</Mass>
 		<MarketValue>5</MarketValue>
 		<SellPriceFactor>0.3</SellPriceFactor>
 		<Bulk>2</Bulk>
-		<MeleeCounterParryBonus>0.15</MeleeCounterParryBonus>
+		<MeleeCounterParryBonus>0.2</MeleeCounterParryBonus>
 	  </statBases>
 	  
 		<equippedStatOffsets>
@@ -34,8 +33,7 @@
 		</equippedStatOffsets>
 
 	  <costList>
-		<WoodLog>10</WoodLog>
-		<Steel>30</Steel>
+		<Steel>35</Steel>
 	  </costList>
 
 	  <tools>
@@ -55,7 +53,7 @@
 			<capacities>
 				<li>Cut</li>
 			</capacities>
-			<power>14</power>
+			<power>15</power>
 			<cooldownTime>2.65</cooldownTime>
 			<armorPenetrationSharp>1.80</armorPenetrationSharp>
 			<linkedBodyPartsGroup>Head</linkedBodyPartsGroup>

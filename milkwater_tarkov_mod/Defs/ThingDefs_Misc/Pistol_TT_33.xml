@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef ParentName="m_BasePistol">
+	  <defName>m_TT_33_Pistol</defName>
+	  <label>TT-33</label>
+	  <description>A legendary pistol that has seen numerous military conflicts throughout the years and is still in service in certain regions of the world, in one variation or another. This one is a classic TT-33, the most mass-produced version. It features a Browning short-recoil tilting-barrel system, but other than that, the construction design is very unique - it is purposefully simple, single-action, and no safety measures except half-cock notch, which makes it be able to withstand horrible operating abuse. Thanks to the powerful 7.62x25 cartridge and relatively long barrel, the TT boasts high muzzle velocity, penetration, and impressive accuracy, even over long distances.</description>
+	  <graphicData>
+		<texPath>Things/Weapons/m_tt_33</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>0.9</drawSize>
+	  </graphicData>
+	  <equippedAngleOffset>0</equippedAngleOffset>
+	  
+      <uiIconScale>1.75</uiIconScale>
+
+	  <statBases>
+		<WorkToMake>4500</WorkToMake>
+		<SightsEfficiency>0.7</SightsEfficiency>
+		<ShotSpread>0.22</ShotSpread>
+		<SwayFactor>1.15</SwayFactor>
+		<Bulk>2.0</Bulk>
+		<Mass>1</Mass>
+		<RangedWeapon_Cooldown>0.38</RangedWeapon_Cooldown>
+	  </statBases>
+
+	  <costList>
+		<Steel>30</Steel>
+		<ComponentIndustrial>2</ComponentIndustrial>
+	  </costList>
+
+	  <verbs>
+		<li Class="CombatExtended.VerbPropertiesCE">
+		  <recoilAmount>3.1</recoilAmount>
+		  <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+		  <hasStandardCommand>true</hasStandardCommand>
+		  <defaultProjectile>Bullet_762x25mmTokarev_FMJ</defaultProjectile>
+		  <burstShotCount>1</burstShotCount>
+		  <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+		  <warmupTime>0.6</warmupTime>
+		  <range>12</range>
+		  <soundCast>Milkwater_Shot_TT_33</soundCast>
+		  <soundCastTail>GunTail_Light</soundCastTail>
+		  <muzzleFlashScale>7</muzzleFlashScale>
+		</li>
+	  </verbs>
+	  
+	  <comps>
+		<li Class="CombatExtended.CompProperties_AmmoUser">
+		  <magazineSize>8</magazineSize>
+		  <reloadTime>4</reloadTime>
+		  <ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
+		</li>
+		<li Class="CombatExtended.CompProperties_FireModes">
+		  <aiAimMode>Snapshot</aiAimMode>
+		</li>
+	  </comps>
+	  <recipeMaker>
+		<researchPrerequisite>Gunsmithing</researchPrerequisite>
+		<skillRequirements>
+		  <Crafting>4</Crafting>
+		</skillRequirements>
+	  </recipeMaker>
+	  
+	  <modExtensions>
+		<li Class="CombatExtended.GunDrawExtension">
+		  <DrawSize>1.0,1.0</DrawSize>
+		  <DrawOffset>0.16,0.08</DrawOffset>
+		  <CasingOffset>-0.07,0.065</CasingOffset>
+		  <CasingAngleOffset>0</CasingAngleOffset>
+		</li>
+		<li Class="MuzzleFlash.MuzzleFlashProps" MayRequire="IssacZhuang.MuzzleFlash">
+		  <def>MF_StandardMuzzleFalshTwo</def>
+		  <drawSize>(1,1)</drawSize>
+		  <offsets><li>(0.35,0.17)</li></offsets>
+		</li>
+	  </modExtensions>
+	</ThingDef>
+
+
+</Defs>
